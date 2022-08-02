@@ -89,7 +89,7 @@ function Header() {
             </div>
         </header>
 
-            <div className={`top-16 bg-darkblue w-[90%] h-screen fixed  opacity-96 p-5 inline-block ${menu ? '' : 'left-[-90%]'}`}>
+            <div className={`top-16 bg-darkblue w-[90%] h-screen fixed  opacity-96 p-5 z-20 inline-block ${menu ? '' : 'left-[-90%]'}`}>
                 <ul>
                     <li className='pb-3 font-semibold text-xl text-white'>
                         Movie
