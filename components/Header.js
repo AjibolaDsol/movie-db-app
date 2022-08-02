@@ -21,7 +21,7 @@ function Header() {
                         </div>
 
                         <ul className='flex text-white font-semibold'>
-                            <li className='mr-4 p-2 cursor-pointer group'>
+                            <li className='mr-4 p-2 cursor-pointer group text-base'>
                                 Movies
                                 <div className='absolute text-[#212529] w-44 bg-white h-[138px] top-12 z-50 rounded-md group-hover:block hidden'>
                                     <ul className='text-base max-h-96 absolute font-normal leading-6 py-2 w-full'>
@@ -33,7 +33,7 @@ function Header() {
                                 </div> 
                             </li>
 
-                            <li className='mr-4 p-2 cursor-pointer group'>
+                            <li className='mr-4 p-2 cursor-pointer group text-base'>
                                 TvShows
                                 <div className='absolute text-[#212529] w-44 bg-white h-[138px] top-12 z-50 rounded-md group-hover:block hidden'>
                                     <ul className='text-base max-h-96 absolute font-normal leading-6 py-2 w-full'>
@@ -45,7 +45,7 @@ function Header() {
                                 </div> 
                             </li>
 
-                            <li className='mr-4 p-2 cursor-pointer group'>
+                            <li className='mr-4 p-2 cursor-pointer group text-base'>
                                 People
                                 <div className='absolute text-[#212529] w-44 bg-white h-12 top-12 z-50 rounded-md group-hover:block hidden'>
                                     <ul className='text-base max-h-12 absolute font-normal leading-6 py-2 w-full'>
@@ -54,7 +54,7 @@ function Header() {
                                 </div> 
                             </li>
 
-                            <li className='p-2 cursor-pointer group'>
+                            <li className='p-2 cursor-pointer group text-base'>
                                 More
                                 <div className='absolute text-[#212529] w-44 bg-white h-12 top-12 z-50 rounded-md group-hover:block hidden'>
                                     <ul className='text-base max-h-96 absolute font-normal leading-6 py-2 w-full'>
@@ -79,8 +79,8 @@ function Header() {
                         <section className={`absolute w-full left-0 top-16 ${isOpen ? 'block': 'hidden'}`}>
                             <div className='w-full h-11 bg-white px-10 flex items-center'>
                                     <span className='flex w-full items-center'>
-                                        <FaSearch className='mr-5'/>
-                                        <input placeholder='Search For Movies, TvShows or People' className='w-full border-none outline-none h-11 text-[#acacac] italic'/>
+                                        <FaSearch className='mr-5 w-5 h-5'/>
+                                        <input placeholder='Search For Movies, TvShows or People' className='w-full border-none outline-none h-11 text-[#acacac] italic text-base'/>
                                     </span>
                             </div>
                         </section>
