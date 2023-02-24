@@ -3,6 +3,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {FaSearch} from 'react-icons/fa'
 import { MdOutlineClose } from 'react-icons/md'
 import {useState} from 'react'
+import Link from 'next/link'
 
 function Header() {
 
@@ -10,14 +11,18 @@ function Header() {
     const [menu, setMenu] = useState(false)
 
     return (
-        <nav className='w-full'>
+        <nav className='w-full z-50 mb-16'>
 
-        <header className={`h-16 bg-darkblue fixed top-0 w-full flex items-center`}>
+        <header className={`h-16 bg-darkblue fixed top-0 w-full flex items-center z-50  `}>
             <div className='px-5 w-full lg:px-10'>
                 <div className='flex justify-between items-center w-full'>
                     <div className='lg:flex hidden lg:items-center'>
                         <div className='mr-4'>
-                            <Image src={'/tmdb.svg'} width={154} height={20} alt='Logo'/>
+                            <Link href="/">
+                                <a>
+                                    <Image src={'/tmdb.svg'} width={154} height={20} alt='Logo'/>
+                                </a>
+                            </Link>
                         </div>
 
                         <ul className='flex text-white font-semibold'>
@@ -25,10 +30,10 @@ function Header() {
                                 Movies
                                 <div className='absolute text-[#212529] w-44 bg-white h-[138px] top-12 z-50 rounded-md group-hover:block hidden'>
                                     <ul className='text-base max-h-96 absolute font-normal leading-6 py-2 w-full'>
-                                        <li className='py-1 px-6 hover:bg-gray-200'>Popular</li>
-                                        <li className='py-1 px-6 hover:bg-gray-200'>Now Playing</li>
-                                        <li className='py-1 px-6 hover:bg-gray-200'>Upcoming</li>
-                                        <li className='py-1 px-6 hover:bg-gray-200'>Top Rated</li>
+                                        <li className='py-1 px-6 hover:bg-gray-200'><Link href="/movie/popular">Popular</Link></li>
+                                        <li className='py-1 px-6 hover:bg-gray-200'><Link href="/movie/now_playing">Now Playing</Link></li>
+                                        <li className='py-1 px-6 hover:bg-gray-200'><Link href="/movie/upcoming">Upcoming</Link></li>
+                                        <li className='py-1 px-6 hover:bg-gray-200'><Link href="/movie/top_rated">Top Rated</Link></li>
                                     </ul>                                    
                                 </div> 
                             </li>
@@ -49,8 +54,9 @@ function Header() {
                                 People
                                 <div className='absolute text-[#212529] w-44 bg-white h-12 top-12 z-50 rounded-md group-hover:block hidden'>
                                     <ul className='text-base max-h-12 absolute font-normal leading-6 py-2 w-full'>
-                                        <li className='py-1 px-6 hover:bg-gray-200'>Popular People</li>                                        
-                                    </ul>                                    
+                                    <Link href='/person'>
+                                         <li className='py-1 px-6 hover:bg-gray-200'>Popular People</li>                                     
+                                       </Link>                                    </ul>                                    
                                 </div> 
                             </li>
 
@@ -70,7 +76,9 @@ function Header() {
                     </a>
 
                         <div className='lg:hidden'>
-                            <Image src={'/tmdb2.svg'} width={55} height={40} alt='mobile-logo'/>
+                            <Link href='/'>
+                                <Image src={'/tmdb2.svg'} width={55} height={40} alt='mobile-logo'/>
+                            </Link>
                         </div>
                         <a onClick={() => setisOpen(!isOpen)} className='cursor-pointer peer'>
                             {isOpen ? <MdOutlineClose className='h-5 w-5 text-white'/> : <FaSearch className='h-5 w-5 text-lightblue'/> }
